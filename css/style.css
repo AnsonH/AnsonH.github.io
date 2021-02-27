@@ -1,8 +1,14 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 *,
 *::before,
 *::after {
@@ -12,6 +18,136 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-size: 17px;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #1f2122;
+  color: #b2b2b2;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #53d5e4;
+  transition: all 150ms ease-in-out;
+}
+
+/**** Display ****/
+@media (min-width: 769px) {
+  .hide-lg-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-md-down {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-sm-down {
+    display: none !important;
+  }
+}
+
+/**** Spacing ****/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.pad-x {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/**** Flex ****/
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.header {
+  background-color: #21555b;
+  color: #ffffff;
+}
+.header.open .nav__hamburger {
+  background-color: #21555b;
+}
+.header.open .nav__hamburger::before {
+  transform: translateY(-7px) rotate(45deg);
+}
+.header.open .nav__hamburger::after {
+  transform: translateY(4px) rotate(-45deg);
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+}
+nav .nav__logo {
+  display: inline-block;
+  transition: all 150ms ease-in-out;
+}
+nav .nav__logo:hover, nav .nav__logo:focus {
+  opacity: 0.7;
+}
+nav .nav__logo > img {
+  display: block;
+  margin: auto 0;
+}
+nav .nav__links {
+  list-style: none;
+}
+nav .nav__links a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #ffffff;
+  transition: all 150ms ease-in-out;
+}
+nav .nav__links a:hover, nav .nav__links a:focus {
+  background-color: #3a96a080;
+}
+nav .nav__menu {
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  background-color: transparent;
+  opacity: 1;
+  border: none;
+  outline: none;
+  transition: all 150ms ease-in-out;
+}
+nav .nav__menu:hover, nav .nav__menu:focus {
+  cursor: pointer;
+  opacity: 0.75;
+}
+nav .nav__hamburger {
+  height: 3px;
+  width: 24px;
+  background-color: #ffffff;
+  transition: all 150ms ease-in-out;
+}
+nav .nav__hamburger::before, nav .nav__hamburger::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: #ffffff;
+  transition: all 150ms ease-in-out;
+}
+nav .nav__hamburger::before {
+  transform-origin: 2px 4px;
+  transform: translateY(-7px);
+}
+nav .nav__hamburger::after {
+  transform-origin: 4px 0px;
+  transform: translateY(4px);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,104 @@
+@use "variables" as *;
+
+.header {
+  background-color: $dark-cyan;
+  color: $white;
+
+  // Styles when mobile menu is opened
+  &.open {
+    .nav__hamburger {
+      // If we animate opacity to 0, it also applies to ::before & ::after
+      // Thus, the 3 lines will disappear. A workaround is to set background color
+      // of middle line to be same as the navbar background to make it go away
+      background-color: $dark-cyan;
+
+      &::before {
+        transform: translateY(-7px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(4px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+
+  .nav__logo {
+    display: inline-block;
+    transition: $ease-150;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    > img {
+      display: block; // So that .nav__logo and img occupy same size
+      margin: auto 0;
+    }
+  }
+
+  .nav__links {
+    list-style: none;
+
+    & a {
+      display: inline-block;
+      padding: 15px 20px;
+      color: $white;
+      transition: $ease-150;
+
+      &:hover,
+      &:focus {
+        background-color: $blue-hover;
+      }
+    }
+  }
+
+  .nav__menu {
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    background-color: transparent;
+    opacity: 1;
+    border: none;
+    outline: none; // Remove default outline on click
+    transition: $ease-150;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+
+  .nav__hamburger {
+    height: 3px;
+    width: 24px;
+    background-color: $white;
+    transition: $ease-150;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 24px;
+      background-color: $white;
+      transition: $ease-150;
+    }
+
+    &::before {
+      transform-origin: 2px 4px;
+      transform: translateY(-7px);
+    }
+
+    &::after {
+      transform-origin: 4px 0px;
+      transform: translateY(4px);
+    }
+  }
+}

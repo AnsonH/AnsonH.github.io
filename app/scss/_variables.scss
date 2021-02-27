@@ -1,0 +1,41 @@
+// Colors
+$red: #ff5f56;
+$orange: #ff9900;
+$lime: #5fd700;
+$green: #27c93f;
+$light-blue: #53d5e4;
+$blue: #3a95a0;
+$blue-hover: #3a96a080;
+$cyan: #436069;
+$dark-cyan: #21555b;
+$darkest-cyan: #1f2122;
+$white: #ffffff;
+$light-gray: #b2b2b2;
+$gray: #777777;
+$dark-gray: #505050;
+$black: #1e1e1e;
+
+// Breakpoints
+$breakpoints-up: (
+  "medium": "481px",
+  "large": "769px",
+  "extra-large": "1081px",
+);
+
+$breakpoints-down: (
+  "small": "480px",
+  "medium": "768px",
+  "large": "1080px",
+);
+
+// Font sizes (12, 14, 16, 17, 20, 24, 36, 55)
+$fz-xxs: 12px;
+$fz-xs: 14px;
+$fz-sm: 16px;
+$fz-md: 17px;
+$fz-lg: 20px;
+$fz-xl: 24px;
+$fz-heading: 36px;
+
+// Transition
+$ease-150: all 150ms ease-in-out;

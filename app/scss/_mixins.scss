@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+// Breakpoint mixins
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($map: $breakpoints-up, $key: $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($map: $breakpoints-down, $key: $size)) {
+    @content;
+  }
+}

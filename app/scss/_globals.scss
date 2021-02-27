@@ -1,6 +1,16 @@
+@use "variables" as *;
+@use "mixins";
+
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 *,
@@ -12,4 +22,60 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-size: $fz-md;
+  font-family: "Ubuntu", sans-serif;
+  background-color: $darkest-cyan;
+  color: $light-gray;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $light-blue;
+  transition: $ease-150;
+}
+
+/**** Display ****/
+
+// Hide for widths >= large
+.hide-lg-up {
+  @include mixins.breakpoint-up(large) {
+    display: none !important;
+  }
+}
+
+.hide-md-down {
+  @include mixins.breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+
+.hide-sm-down {
+  @include mixins.breakpoint-down(small) {
+    display: none !important;
+  }
+}
+
+/**** Spacing ****/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.pad-x {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/**** Flex ****/
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
 }

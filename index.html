@@ -4,12 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Front-end web developer focused on building websites with stunning interfaces and experiences."
+    />
+    <meta
+      name="keywords"
+      content="front-end, developer, web, website, anson heung, anson, heung, student, hkust, ust, university"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Anson Heung</title>
+    <title>Anson Heung | Front-end Developer</title>
   </head>
   <body>
-    <!-- Header (Navbar) -->
-    <header class="header"></header>
+    <!-- Navbar -->
+    <header class="header">
+      <div class="container">
+        <nav class="flex flex-ai-c flex-jc-sb pad-x">
+          <a href="/" class="nav__logo">
+            <img src="./images/nav_logo.svg" alt="Logo" width="106" height="19" />
+          </a>
+
+          <ul class="nav__links hide-md-down flex">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Menu icon -->
+          <button id="hamburger" class="nav__menu hide-lg-up" aria-label="Menu button">
+            <div class="nav__hamburger"></div>
+          </button>
+        </nav>
+      </div>
+    </header>
 
     <!-- Hero -->
     <section class="hero"></section>
@@ -19,5 +60,7 @@
 
     <!-- Work Experience -->
     <section class="work"></section>
+
+    <script src="app/js/script.js"></script>
   </body>
 </html>
