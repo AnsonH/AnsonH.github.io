@@ -5,3 +5,12 @@ const hamburger = document.querySelector("#hamburger");
 hamburger.addEventListener("click", function () {
   header.classList.toggle("open");
 });
+
+// Remove focus after clicking for buttons & anchor links
+const navLinks = document.querySelectorAll(".nav__links > li > a");
+const focusElements = [...navLinks, hamburger];
+focusElements.forEach(function (element) {
+  element.addEventListener("click", function () {
+    element.blur();
+  });
+});
