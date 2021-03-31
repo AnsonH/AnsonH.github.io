@@ -20,6 +20,10 @@
         transform: translateY(4px) rotate(-45deg);
       }
     }
+
+    .nav__mobile_menu {
+      height: 240px;
+    }
   }
 }
 
@@ -100,6 +104,38 @@ nav {
     &::after {
       transform-origin: 4px 0px;
       transform: translateY(4px);
+    }
+  }
+
+  div.nav__mobile_menu {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+
+    transition: $ease-150;
+    height: 0px; // -> 240px when opened
+    overflow: hidden; // Hide links when not opened
+
+    background-color: $dark-cyan;
+  }
+
+  .nav__mobile_links {
+    padding-left: 0;
+    margin: 20px 0;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+
+    & a {
+      width: 100%;
+      padding: 15px 0;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        background-color: $blue-hover;
+      }
     }
   }
 }
