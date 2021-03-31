@@ -157,7 +157,7 @@ nav div.nav__mobile_menu {
   top: 50px;
   left: 0px;
   width: 100%;
-  transition: all 150ms ease-in-out;
+  transition: all 250ms ease-in-out;
   height: 0px;
   overflow: hidden;
   background-color: #21555b;
