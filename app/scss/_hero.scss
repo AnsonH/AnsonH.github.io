@@ -1,0 +1,74 @@
+@use "variables" as *;
+@use "mixins";
+
+.hero {
+  padding: 60px 0;
+  background-image: url("../../images/hero_bg_large.svg");
+  background-size: 100% 100%; // Stretch BG to 100% width & height
+
+  @include mixins.breakpoint-up(medium) {
+    padding: 80px 0;
+  }
+
+  &__terminal {
+    min-height: 500px;
+    background-color: $black;
+    border: 2px solid $gray;
+    border-radius: 10px;
+
+    @include mixins.breakpoint-up(large) {
+      margin: 0 60px;
+    }
+  }
+
+  &__traffic_light {
+    width: 68px;
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-image: url("../../images/traffic_light_btn.svg");
+
+    @include mixins.breakpoint-up(medium) {
+      margin-left: 25px;
+    }
+  }
+
+  &__terminal_container {
+    padding: 30px 15px 20px;
+
+    @include mixins.breakpoint-up(medium) {
+      padding: 40px 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    .material-icons {
+      margin-top: 5px;
+      color: $lime;
+    }
+
+    &_text {
+      display: inline-block;
+      margin: 0 0 0 10px;
+      font-size: 30px;
+    }
+  }
+
+  // Container for description & CTA buttons
+  &__content {
+    margin-left: 5px;
+  }
+
+  &__description {
+    margin-top: 45px;
+    margin-bottom: 35px;
+    font-size: $fz-sm;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+  }
+}

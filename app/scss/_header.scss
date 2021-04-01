@@ -1,6 +1,9 @@
 @use "variables" as *;
+@use "mixins";
 
 .header {
+  position: sticky;
+  top: 0; // Required when using position sticky
   background-color: $dark-cyan;
   color: $white;
 
@@ -30,6 +33,11 @@
 nav {
   height: 50px;
   width: 100%;
+
+  @include mixins.breakpoint-up(large) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   .nav__logo {
     display: inline-block;

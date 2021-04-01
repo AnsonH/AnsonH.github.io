@@ -31,6 +31,26 @@ a {
   transition: all 150ms ease-in-out;
 }
 
+h1,
+h2 {
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+p {
+  line-height: 1.4;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /**** Display ****/
 @media (min-width: 769px) {
   .hide-lg-up {
@@ -52,13 +72,23 @@ a {
 
 /**** Spacing ****/
 .container {
-  max-width: 1140px;
-  margin: 0 auto;
+  margin: 0 25px;
+}
+@media (min-width: 481px) {
+  .container {
+    margin: 0 40px;
+  }
+}
+@media (min-width: 769px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 }
 
-.pad-x {
-  padding-left: 40px;
-  padding-right: 40px;
+.pad-y {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /**** Flex ****/
@@ -72,7 +102,39 @@ a {
   align-items: center;
 }
 
+/**** Buttons ****/
+.outline-btn {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+.outline-btn .material-icons {
+  margin-right: 15px;
+}
+
+.email-btn {
+  width: 180px;
+  border-color: #ff9900;
+  color: #ff9900;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.resume-btn {
+  width: 130px;
+  border-color: #53d5e4;
+  color: #53d5e4;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
 .header {
+  position: sticky;
+  top: 0;
   background-color: #21555b;
   color: #ffffff;
 }
@@ -92,6 +154,12 @@ a {
 nav {
   height: 50px;
   width: 100%;
+}
+@media (min-width: 769px) {
+  nav {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 nav .nav__logo {
   display: inline-block;
@@ -176,6 +244,72 @@ nav .nav__mobile_links a {
 }
 nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   background-color: #3a96a080;
+}
+
+.hero {
+  padding: 60px 0;
+  background-image: url("../../images/hero_bg_large.svg");
+  background-size: 100% 100%;
+}
+@media (min-width: 481px) {
+  .hero {
+    padding: 80px 0;
+  }
+}
+.hero__terminal {
+  min-height: 500px;
+  background-color: #1e1e1e;
+  border: 2px solid #777777;
+  border-radius: 10px;
+}
+@media (min-width: 769px) {
+  .hero__terminal {
+    margin: 0 60px;
+  }
+}
+.hero__traffic_light {
+  width: 68px;
+  height: 15px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-image: url("../../images/traffic_light_btn.svg");
+}
+@media (min-width: 481px) {
+  .hero__traffic_light {
+    margin-left: 25px;
+  }
+}
+.hero__terminal_container {
+  padding: 30px 15px 20px;
+}
+@media (min-width: 481px) {
+  .hero__terminal_container {
+    padding: 40px 30px;
+  }
+}
+.hero__title {
+  margin-bottom: 20px;
+}
+.hero__title .material-icons {
+  margin-top: 5px;
+  color: #5fd700;
+}
+.hero__title_text {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 30px;
+}
+.hero__content {
+  margin-left: 5px;
+}
+.hero__description {
+  margin-top: 45px;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+.hero__cta {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
