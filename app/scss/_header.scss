@@ -4,6 +4,7 @@
 .header {
   position: sticky;
   top: 0; // Required when using position sticky
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
   background-color: $dark-cyan;
   color: $white;
 
