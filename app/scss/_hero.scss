@@ -2,68 +2,74 @@
 @use "mixins";
 
 .hero {
-  padding: 45px 0;
+  padding: 4.5rem 0;
   background-image: url("../../images/hero_bg_large.svg");
   background-size: 100% 100%; // Stretch BG to 100% width & height
 
   @include mixins.breakpoint-up(medium) {
-    padding: 80px 0;
+    padding: 6rem 0;
+  }
+
+  @include mixins.breakpoint-up(large) {
+    padding: 8rem 0;
   }
 
   &__terminal {
-    min-height: 500px;
+    min-height: 50rem;
     background-color: $black;
     border: 2px solid $gray;
     border-radius: 10px;
 
     @include mixins.breakpoint-up(large) {
-      margin: 0 60px;
+      margin: 0 6rem;
     }
   }
 
   &__traffic_light {
-    width: 68px;
-    height: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 6.8rem;
+    height: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
     background-image: url("../../images/traffic_light_btn.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; // Takes up 100% width and height
 
     @include mixins.breakpoint-up(medium) {
-      margin-left: 25px;
+      margin-left: 2.5rem;
     }
   }
 
   &__terminal_container {
-    padding: 30px 15px 20px;
+    padding: 3rem 1.5rem 2rem;
 
     @include mixins.breakpoint-up(medium) {
-      padding: 40px 30px;
+      padding: 4rem 3rem;
     }
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 
     .material-icons {
-      margin-top: 5px;
+      margin-top: 0.5rem;
       color: $lime;
     }
 
     &_text {
       display: inline-block;
-      margin: 0 0 0 10px;
-      font-size: 30px;
+      margin: 0 0 0 1rem;
+      font-size: 3rem;
     }
   }
 
   // Container for description & CTA buttons
   &__content {
-    margin-left: 5px;
+    margin-left: 0.5rem;
   }
 
   &__description {
-    margin-top: 45px;
-    margin-bottom: 35px;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
     font-size: $fz-sm;
   }
 

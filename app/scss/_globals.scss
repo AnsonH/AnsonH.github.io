@@ -2,14 +2,15 @@
 @use "mixins";
 
 html {
-  font-size: 100%;
+  font-size: 62.5%; // Default font size = 16px, --> 10px = 1rem
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+// Disable smooth scrolling if user prefers reduced motion
 @media screen and (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 }
 
@@ -79,21 +80,21 @@ p {
 
 /**** Spacing ****/
 .container {
-  margin: 0 25px;
+  margin: 0 2.5rem;
 
   @include mixins.breakpoint-up(medium) {
-    margin: 0 40px;
+    margin: 0 4rem;
   }
 
   @include mixins.breakpoint-up(large) {
-    max-width: 1140px;
+    max-width: 114rem;
     margin: 0 auto;
   }
 }
 
 .pad-y {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 /**** Flex ****/
@@ -113,19 +114,19 @@ p {
 .outline-btn {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
-  margin: 10px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
   border-style: solid;
   border-width: 2px;
   border-radius: 5px;
 
   .material-icons {
-    margin-right: 15px;
+    margin-right: 1.5rem;
   }
 }
 
 .email-btn {
-  width: 180px;
+  width: 18rem;
   border-color: $orange;
   color: $orange;
   font-family: $ubuntu-mono;
@@ -133,7 +134,7 @@ p {
 }
 
 .resume-btn {
-  width: 130px;
+  width: 13rem;
   border-color: $light-blue;
   color: $light-blue;
   font-family: $ubuntu-mono;

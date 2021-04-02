@@ -1,12 +1,12 @@
 html {
-  font-size: 100%;
+  font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 }
 *,
@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 17px;
+  font-size: 1.7rem;
   font-family: "Ubuntu", sans-serif;
   background-color: #1f2122;
   color: #b2b2b2;
@@ -72,23 +72,23 @@ p {
 
 /**** Spacing ****/
 .container {
-  margin: 0 25px;
+  margin: 0 2.5rem;
 }
 @media (min-width: 481px) {
   .container {
-    margin: 0 40px;
+    margin: 0 4rem;
   }
 }
 @media (min-width: 769px) {
   .container {
-    max-width: 1140px;
+    max-width: 114rem;
     margin: 0 auto;
   }
 }
 
 .pad-y {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 /**** Flex ****/
@@ -106,18 +106,18 @@ p {
 .outline-btn {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
-  margin: 10px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0;
   border-style: solid;
   border-width: 2px;
   border-radius: 5px;
 }
 .outline-btn .material-icons {
-  margin-right: 15px;
+  margin-right: 1.5rem;
 }
 
 .email-btn {
-  width: 180px;
+  width: 18rem;
   border-color: #ff9900;
   color: #ff9900;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
@@ -125,7 +125,7 @@ p {
 }
 
 .resume-btn {
-  width: 130px;
+  width: 13rem;
   border-color: #53d5e4;
   color: #53d5e4;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
@@ -135,7 +135,7 @@ p {
 .header {
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2);
   background-color: #21555b;
   color: #ffffff;
 }
@@ -149,17 +149,17 @@ p {
   transform: translateY(4px) rotate(-45deg);
 }
 .header.open .nav__mobile_menu {
-  height: 240px;
+  height: 24rem;
 }
 
 nav {
-  height: 50px;
+  height: 5rem;
   width: 100%;
 }
 @media (min-width: 769px) {
   nav {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 nav .nav__logo {
@@ -178,7 +178,7 @@ nav .nav__links {
 }
 nav .nav__links a {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 1.5rem 2rem;
   color: #ffffff;
   transition: all 150ms ease-in-out;
 }
@@ -186,8 +186,8 @@ nav .nav__links a:hover, nav .nav__links a:focus {
   background-color: #3a96a080;
 }
 nav .nav__menu {
-  height: 24px;
-  width: 24px;
+  height: 2.4rem;
+  width: 2.4rem;
   padding: 0;
   background-color: transparent;
   opacity: 1;
@@ -200,47 +200,47 @@ nav .nav__menu:hover, nav .nav__menu:focus {
   opacity: 0.75;
 }
 nav .nav__hamburger {
-  height: 3px;
-  width: 24px;
+  height: 0.3rem;
+  width: 2.4rem;
   background-color: #ffffff;
   transition: all 150ms ease-in-out;
 }
 nav .nav__hamburger::before, nav .nav__hamburger::after {
   content: "";
   display: block;
-  height: 3px;
-  width: 24px;
+  height: 0.3rem;
+  width: 2.4rem;
   background-color: #ffffff;
   transition: all 150ms ease-in-out;
 }
 nav .nav__hamburger::before {
-  transform-origin: 2px 4px;
+  transform-origin: 0.2rem 0.4rem;
   transform: translateY(-7px);
 }
 nav .nav__hamburger::after {
-  transform-origin: 4px 0px;
+  transform-origin: 0.4rem 0rem;
   transform: translateY(4px);
 }
 nav div.nav__mobile_menu {
   position: absolute;
-  top: 50px;
-  left: 0px;
+  top: 5rem;
+  left: 0rem;
   width: 100%;
   transition: all 250ms ease-in-out;
-  height: 0px;
+  height: 0rem;
   overflow: hidden;
   background-color: #21555b;
 }
 nav .nav__mobile_links {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 2rem 0;
   text-decoration: none;
   list-style: none;
   text-align: center;
 }
 nav .nav__mobile_links a {
   width: 100%;
-  padding: 15px 0;
+  padding: 1.5rem 0;
   color: #ffffff;
 }
 nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
@@ -248,65 +248,72 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 
 .hero {
-  padding: 45px 0;
+  padding: 4.5rem 0;
   background-image: url("../../images/hero_bg_large.svg");
   background-size: 100% 100%;
 }
 @media (min-width: 481px) {
   .hero {
-    padding: 80px 0;
+    padding: 6rem 0;
+  }
+}
+@media (min-width: 769px) {
+  .hero {
+    padding: 8rem 0;
   }
 }
 .hero__terminal {
-  min-height: 500px;
+  min-height: 50rem;
   background-color: #1e1e1e;
   border: 2px solid #777777;
   border-radius: 10px;
 }
 @media (min-width: 769px) {
   .hero__terminal {
-    margin: 0 60px;
+    margin: 0 6rem;
   }
 }
 .hero__traffic_light {
-  width: 68px;
-  height: 15px;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 6.8rem;
+  height: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
   background-image: url("../../images/traffic_light_btn.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 @media (min-width: 481px) {
   .hero__traffic_light {
-    margin-left: 25px;
+    margin-left: 2.5rem;
   }
 }
 .hero__terminal_container {
-  padding: 30px 15px 20px;
+  padding: 3rem 1.5rem 2rem;
 }
 @media (min-width: 481px) {
   .hero__terminal_container {
-    padding: 40px 30px;
+    padding: 4rem 3rem;
   }
 }
 .hero__title {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .hero__title .material-icons {
-  margin-top: 5px;
+  margin-top: 0.5rem;
   color: #5fd700;
 }
 .hero__title_text {
   display: inline-block;
-  margin: 0 0 0 10px;
-  font-size: 30px;
+  margin: 0 0 0 1rem;
+  font-size: 3rem;
 }
 .hero__content {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 .hero__description {
-  margin-top: 45px;
-  margin-bottom: 35px;
-  font-size: 16px;
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 1.6rem;
 }
 .hero__cta {
   display: flex;

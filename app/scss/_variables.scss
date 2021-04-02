@@ -27,14 +27,14 @@ $breakpoints-down: (
   "large": "1080px",
 );
 
-// Font sizes (12, 14, 16, 17, 20, 24, 36, 55)
-$fz-xxs: 12px;
-$fz-xs: 14px;
-$fz-sm: 16px;
-$fz-md: 17px;
-$fz-lg: 20px;
-$fz-xl: 24px;
-$fz-heading: 36px;
+// Font sizes (12, 14, 16, 17, 20, 24, 36)
+$fz-xxs: 1.2rem;
+$fz-xs: 1.4rem;
+$fz-sm: 1.6rem;
+$fz-md: 1.7rem;
+$fz-lg: 2rem;
+$fz-xl: 2.4rem;
+$fz-heading: 3.6rem;
 
 // Font stacks
 $ubuntu-mono: "Ubuntu Mono", "Courier New", Courier, monospace;
