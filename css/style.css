@@ -260,7 +260,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 
 .hero {
   padding: 4rem 0;
-  background-image: url("../../images/hero_bg_large.svg");
+  background-image: url("../../images/hero_bg.svg");
   background-size: 100% 100%;
 }
 @media (min-width: 481px) {
