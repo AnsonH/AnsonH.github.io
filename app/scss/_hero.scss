@@ -2,20 +2,18 @@
 @use "mixins";
 
 .hero {
-  padding: 4.5rem 0;
+  padding: 4rem 0;
   background-image: url("../../images/hero_bg_large.svg");
   background-size: 100% 100%; // Stretch BG to 100% width & height
 
   @include mixins.breakpoint-up(medium) {
-    padding: 6rem 0;
-  }
-
-  @include mixins.breakpoint-up(large) {
-    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 5rem);
+    justify-content: center; // Always vertically center the hero section
   }
 
   &__terminal {
-    min-height: 50rem;
     background-color: $black;
     border: 2px solid $gray;
     border-radius: 10px;
@@ -43,7 +41,7 @@
     padding: 3rem 1.5rem 2rem;
 
     @include mixins.breakpoint-up(medium) {
-      padding: 4rem 3rem;
+      padding: 5rem 3rem;
     }
   }
 
@@ -51,20 +49,31 @@
     margin-bottom: 2rem;
 
     .material-icons {
-      margin-top: 0.5rem;
+      margin-top: clamp(0.5rem, 0.9vw, 1rem);
+      font-size: clamp(2.4rem, 3.5vw, 4.19rem);
       color: $lime;
+
+      @include mixins.breakpoint-up(medium) {
+        margin-right: clamp(0px, 0.84vw, 10px);
+      }
     }
 
     &_text {
       display: inline-block;
       margin: 0 0 0 1rem;
-      font-size: 3rem;
+      font-size: clamp(3rem, 4.6vw, 5.5rem);
     }
   }
 
   // Container for description & CTA buttons
   &__content {
-    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0rem;
+
+    @include mixins.breakpoint-up(medium) {
+      padding-left: clamp(3.5rem, 5.3vw, 6.2rem);
+      padding-right: clamp(3.5rem, 5.3vw, 6.2rem);
+    }
   }
 
   &__description {
@@ -76,5 +85,13 @@
   &__cta {
     display: flex;
     flex-direction: column;
+
+    @include mixins.breakpoint-up(medium) {
+      flex-direction: row;
+
+      .email-btn {
+        margin-right: 4rem;
+      }
+    }
   }
 }

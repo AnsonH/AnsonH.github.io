@@ -44,7 +44,7 @@ h2 {
 }
 
 p {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 // Disable text selection
@@ -121,22 +121,36 @@ p {
   border-radius: 5px;
 
   .material-icons {
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
   }
 }
 
 .email-btn {
-  width: 18rem;
+  max-width: 18rem;
   border-color: $orange;
   color: $orange;
   font-family: $ubuntu-mono;
   font-weight: bold;
+
+  @include mixins.breakpoint-up(medium) {
+    max-width: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $orange-hover;
+  }
 }
 
 .resume-btn {
-  width: 13rem;
+  max-width: 13rem;
   border-color: $light-blue;
   color: $light-blue;
   font-family: $ubuntu-mono;
   font-weight: bold;
+
+  &:hover,
+  &:focus {
+    background-color: $light-blue-hover;
+  }
 }
