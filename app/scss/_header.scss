@@ -29,6 +29,17 @@
       height: 24rem;
     }
   }
+
+  // Dark overlay when the mobile menu is opened
+  &__overlay {
+    position: fixed;
+    top: 5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlay;
+    z-index: 1;
+  }
 }
 
 nav {
@@ -121,6 +132,7 @@ nav {
     top: 5rem;
     left: 0rem;
     width: 100%;
+    z-index: 2;
 
     transition: $ease-250;
     height: 0rem; // -> 24.0rem when opened

@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins";
+@use "keyframes";
 
 html {
   font-size: 62.5%; // Default font size = 16px, --> 10px = 1rem
@@ -108,6 +109,22 @@ p {
   &-ai-c {
     align-items: center;
   }
+}
+
+/**** Animations ****/
+// All animation keyframes are defined in "_keyframes.scss"
+
+// Initially set visibility to hidden for elements that has fade effect
+.has-fade {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fade-in 250ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 250ms ease-in-out forwards;
 }
 
 /**** Buttons ****/

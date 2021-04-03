@@ -1,3 +1,61 @@
+/***** General *****/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/***** Hero *****/
+@keyframes hero-hand-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -102,6 +160,19 @@ p {
   align-items: center;
 }
 
+/**** Animations ****/
+.has-fade {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fade-in 250ms ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 250ms ease-in-out forwards;
+}
+
 /**** Buttons ****/
 .outline-btn {
   display: flex;
@@ -161,6 +232,15 @@ p {
 }
 .header.open .nav__mobile_menu {
   height: 24rem;
+}
+.header__overlay {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(31, 33, 34, 0.8);
+  z-index: 1;
 }
 
 nav {
@@ -237,6 +317,7 @@ nav div.nav__mobile_menu {
   top: 5rem;
   left: 0rem;
   width: 100%;
+  z-index: 2;
   transition: all 250ms ease-in-out;
   height: 0rem;
   overflow: hidden;
@@ -355,7 +436,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   display: inline-block;
   cursor: default;
   animation-name: hero-hand-wave;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   transform-origin: 70% 70%;
 }
@@ -392,35 +473,6 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   }
   .hero__cta .email-btn {
     margin-right: 4rem;
-  }
-}
-
-@keyframes hero-hand-wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
   }
 }
 
