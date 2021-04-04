@@ -1,10 +1,19 @@
 /**
- * A helper function that pauses the program for specified amount of time
+ * Pause the program for specified amount of time
  * @param {number} ms Number of milliseconds to wait
  * @returns Promise
  */
 async function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
+}
+
+/**
+ * Remove a class from an element
+ * @param {string} selector CSS selector for the element
+ * @param {string} className A single class name
+ */
+function removeClass(selector, className) {
+  document.querySelector(selector).classList.remove(className);
 }
 
 /** TypeIt.js (https://typeitjs.com/docs) */
@@ -28,7 +37,8 @@ new TypeIt("#hero__title1", {
   afterComplete: async (step, instance) => {
     await sleep(450);
     instance.destroy(); // Remove first title's cursor
-    document.getElementById("hero__chevron2").classList.remove("invisible");
+    removeClass("#hero__chevron2", "invisible");
+    removeClass("#hero__title2", "invisible");
     heroTitle2.go(); // Begin "typing" second title
   },
 }).go();
