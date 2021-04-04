@@ -44,8 +44,72 @@ h2 {
   color: $white;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 5rem;
+  font-size: $fz-h2-sm;
+  text-align: center;
+
+  @include mixins.breakpoint-up(medium) {
+    font-size: $fz-h2-md;
+    margin-bottom: 6rem;
+  }
+
+  @include mixins.breakpoint-up(large) {
+    font-size: $fz-h2-lg;
+  }
+
+  @include mixins.breakpoint-up(extra-large) {
+    font-size: $fz-h2-xl;
+  }
+
+  &::before,
+  &::after {
+    content: "⠿⠿⠿";
+    color: $cyan;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+
+    @include mixins.breakpoint-up(medium) {
+      content: "⠿⠿⠿⠿⠿";
+      font-size: 2.6rem;
+    }
+
+    @include mixins.breakpoint-up(large) {
+      font-size: 2.9rem;
+    }
+
+    @include mixins.breakpoint-up(extra-large) {
+      font-size: 3.1rem;
+    }
+  }
+
+  &::before {
+    margin-right: 2.2rem;
+
+    @include mixins.breakpoint-up(large) {
+      margin-right: 3rem;
+    }
+  }
+
+  &::after {
+    margin-left: 2.2rem;
+
+    @include mixins.breakpoint-up(large) {
+      margin-left: 3rem;
+    }
+  }
+}
+
 p {
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  display: inline-block;
 }
 
 // Disable text selection
@@ -98,13 +162,17 @@ p {
 }
 
 .pad-y {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
 }
 
 /**** Flex ****/
 .flex {
   display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
 
   &-jc-sb {
     justify-content: space-between;

@@ -16,6 +16,17 @@ function removeClass(selector, className) {
   document.querySelector(selector).classList.remove(className);
 }
 
+/** ScrollReveal (https://scrollrevealjs.org) */
+
+// Default options
+ScrollReveal({
+  delay: 150,
+  scale: 0.92,
+  viewFactor: 0.2, // Reveal when 20% of elements are within viewport
+});
+
+ScrollReveal().reveal(".about");
+
 /** TypeIt.js (https://typeitjs.com/docs) */
 
 const heroTitle2 = new TypeIt("#hero__title2", {

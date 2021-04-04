@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** General *****/
 @keyframes fade-in {
   from {
@@ -96,8 +97,76 @@ h2 {
   color: #ffffff;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media (min-width: 481px) {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 6rem;
+  }
+}
+@media (min-width: 769px) {
+  h2 {
+    font-size: 3.3rem;
+  }
+}
+@media (min-width: 1081px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+h2::before, h2::after {
+  content: "⠿⠿⠿";
+  color: #436069;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 481px) {
+  h2::before, h2::after {
+    content: "⠿⠿⠿⠿⠿";
+    font-size: 2.6rem;
+  }
+}
+@media (min-width: 769px) {
+  h2::before, h2::after {
+    font-size: 2.9rem;
+  }
+}
+@media (min-width: 1081px) {
+  h2::before, h2::after {
+    font-size: 3.1rem;
+  }
+}
+h2::before {
+  margin-right: 2.2rem;
+}
+@media (min-width: 769px) {
+  h2::before {
+    margin-right: 3rem;
+  }
+}
+h2::after {
+  margin-left: 2.2rem;
+}
+@media (min-width: 769px) {
+  h2::after {
+    margin-left: 3rem;
+  }
+}
+
 p {
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  display: inline-block;
 }
 
 .no-select {
@@ -149,13 +218,16 @@ p {
 }
 
 .pad-y {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
 }
 
 /**** Flex ****/
 .flex {
   display: flex;
+}
+.flex-jc-c {
+  justify-content: center;
 }
 .flex-jc-sb {
   justify-content: space-between;
@@ -189,7 +261,7 @@ p {
 }
 @media (min-width: 769px) {
   .outline-btn {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
 .outline-btn .material-icons {
@@ -501,6 +573,55 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   }
   .hero__cta .email-btn {
     margin-right: 4rem;
+  }
+}
+
+.about__content {
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .about__content {
+    flex-direction: row;
+    padding: 0 4rem;
+  }
+}
+.about__photo {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 5rem;
+  transition: all 250ms ease-in-out;
+}
+.about__photo:hover {
+  border-radius: 1rem;
+}
+@media (min-width: 481px) {
+  .about__photo {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+.about__intro_container {
+  margin-top: 5rem;
+}
+@media (min-width: 769px) {
+  .about__intro_container {
+    margin-top: 0;
+    margin-left: 7rem;
+  }
+}
+@media (min-width: 1081px) {
+  .about__intro_container {
+    margin-left: 9rem;
+  }
+}
+@media (min-width: 481px) {
+  .about__intro {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1081px) {
+  .about__intro {
+    font-size: 1.9rem;
   }
 }
 

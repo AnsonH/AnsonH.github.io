@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "mixins";
+
+.about {
+  &__content {
+    flex-direction: column;
+
+    @include mixins.breakpoint-up(large) {
+      flex-direction: row;
+      padding: 0 4rem;
+    }
+  }
+
+  &__photo {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 5rem;
+    transition: $ease-250;
+
+    &:hover {
+      border-radius: 1rem;
+    }
+
+    @include mixins.breakpoint-up(medium) {
+      width: 24rem;
+      height: 24rem;
+    }
+  }
+
+  &__intro_container {
+    margin-top: 5rem;
+
+    @include mixins.breakpoint-up(large) {
+      margin-top: 0;
+      margin-left: 7rem;
+    }
+
+    @include mixins.breakpoint-up(extra-large) {
+      margin-left: 9rem;
+    }
+  }
+
+  &__intro {
+    @include mixins.breakpoint-up(medium) {
+      font-size: $fz-mmd;
+    }
+
+    @include mixins.breakpoint-up(extra-large) {
+      font-size: $fz-lg;
+    }
+  }
+}
