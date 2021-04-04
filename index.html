@@ -79,16 +79,15 @@
           <div class="hero__terminal_container">
             <div class="hero__title flex">
               <span class="material-icons no-select">arrow_forward_ios</span>
-              <h1 class="hero__title_text">
-                Hi, I'm Anson
-                <span class="hero__hand_wave no-select">&#x1F44B;</span>
-              </h1>
+              <h1 id="hero__title1" class="hero__title_text"></h1>
             </div>
             <div class="hero__title flex">
-              <span class="material-icons no-select">arrow_forward_ios</span>
-              <h1 class="hero__title_text">I'm a front-end web developer.</h1>
+              <span id="hero__chevron2" class="material-icons no-select invisible"
+                >arrow_forward_ios</span
+              >
+              <h1 id="hero__title2" class="hero__title_text">I'm a front-end web developer.</h1>
             </div>
-            <div class="hero__content">
+            <div class="hero__content invisible">
               <p class="hero__description">
                 I’m a year 3 student from HKUST who is passionate about building websites with
                 stunning interfaces and experiences.
@@ -96,7 +95,7 @@
               <div class="hero__cta">
                 <a class="outline-btn email-btn" href="mailto:ansonheung2000@gmail.com">
                   <span class="material-icons no-select">mail_outline</span>
-                  <span>Get in Touch</span></a
+                  <span class="outline-btn-text">Get in Touch</span></a
                 >
                 <a
                   class="outline-btn resume-btn"
@@ -105,7 +104,7 @@
                   rel="noreferrer"
                 >
                   <span class="material-icons no-select">get_app</span>
-                  Resume</a
+                  <span class="outline-btn-text">Resume</span></a
                 >
               </div>
             </div>
@@ -124,6 +123,8 @@
     <!-- Work Experience -->
     <section class="work"></section>
 
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="app/js/script.js"></script>
   </body>
 </html>

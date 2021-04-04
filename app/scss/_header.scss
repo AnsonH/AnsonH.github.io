@@ -4,6 +4,7 @@
 .header {
   position: sticky;
   top: 0; // Required when using position sticky
+  z-index: 999; // So that mobile menu & overlay is always on top
   box-shadow: 0 0.2rem 0.4rem 0 rgb(0 0 0 / 20%);
   background-color: $dark-cyan;
   color: $white;
@@ -38,7 +39,6 @@
     bottom: 0;
     left: 0;
     background-color: $overlay;
-    z-index: 1;
   }
 }
 
@@ -132,7 +132,6 @@ nav {
     top: 5rem;
     left: 0rem;
     width: 100%;
-    z-index: 2;
 
     transition: $ease-250;
     height: 0rem; // -> 24.0rem when opened

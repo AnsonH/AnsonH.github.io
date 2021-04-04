@@ -110,6 +110,10 @@ p {
 }
 
 /**** Display ****/
+.invisible {
+  visibility: hidden;
+}
+
 @media (min-width: 769px) {
   .hide-lg-up {
     display: none !important;
@@ -183,8 +187,16 @@ p {
   border-width: 2px;
   border-radius: 5px;
 }
+@media (min-width: 769px) {
+  .outline-btn {
+    font-size: 2rem;
+  }
+}
 .outline-btn .material-icons {
   margin-right: 1.2rem;
+}
+.outline-btn-text {
+  margin-bottom: 0.2rem;
 }
 
 .email-btn {
@@ -210,6 +222,11 @@ p {
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   font-weight: bold;
 }
+@media (min-width: 481px) {
+  .resume-btn {
+    max-width: none;
+  }
+}
 .resume-btn:hover, .resume-btn:focus {
   background-color: rgba(83, 213, 228, 0.2);
 }
@@ -217,6 +234,7 @@ p {
 .header {
   position: sticky;
   top: 0;
+  z-index: 999;
   box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2);
   background-color: #21555b;
   color: #ffffff;
@@ -240,7 +258,6 @@ p {
   bottom: 0;
   left: 0;
   background-color: rgba(31, 33, 34, 0.8);
-  z-index: 1;
 }
 
 nav {
@@ -317,7 +334,6 @@ nav div.nav__mobile_menu {
   top: 5rem;
   left: 0rem;
   width: 100%;
-  z-index: 2;
   transition: all 250ms ease-in-out;
   height: 0rem;
   overflow: hidden;
@@ -381,6 +397,11 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 @media (min-width: 481px) {
   .hero__terminal_container {
+    padding: 5rem 2rem 5rem 3rem;
+  }
+}
+@media (min-width: 769px) {
+  .hero__terminal_container {
     padding: 5rem 3rem;
   }
 }
@@ -413,24 +434,31 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   }
 }
 .hero__title_text {
+  width: 87%;
   display: inline-block;
   margin: 0 0 0 1rem;
   font-size: 3rem;
 }
 @media (min-width: 481px) {
   .hero__title_text {
-    font-size: 3.6rem;
+    width: 93%;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 769px) {
   .hero__title_text {
+    width: 92%;
     font-size: 4.3rem;
   }
 }
 @media (min-width: 1081px) {
   .hero__title_text {
+    width: 94%;
     font-size: 5rem;
   }
+}
+.hero__hand_wave {
+  margin-left: 0.3rem;
 }
 .hero__hand_wave:hover {
   display: inline-block;

@@ -42,6 +42,10 @@
     padding: 3rem 1.5rem 2rem;
 
     @include mixins.breakpoint-up(medium) {
+      padding: 5rem 2rem 5rem 3rem;
+    }
+
+    @include mixins.breakpoint-up(large) {
       padding: 5rem 3rem;
     }
   }
@@ -74,22 +78,30 @@
     }
 
     &_text {
+      width: 87%;
       display: inline-block;
       margin: 0 0 0 1rem;
       font-size: 3rem;
 
       @include mixins.breakpoint-up(medium) {
-        font-size: 3.6rem;
+        width: 93%;
+        font-size: 3.5rem;
       }
 
       @include mixins.breakpoint-up(large) {
+        width: 92%;
         font-size: 4.3rem;
       }
 
       @include mixins.breakpoint-up(extra-large) {
+        width: 94%;
         font-size: 5rem;
       }
     }
+  }
+
+  &__hand_wave {
+    margin-left: 0.3rem;
   }
 
   // Animate hand wave emoji on hover

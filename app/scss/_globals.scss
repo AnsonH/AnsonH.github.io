@@ -60,6 +60,10 @@ p {
 
 /**** Display ****/
 
+.invisible {
+  visibility: hidden;
+}
+
 // Hide for widths >= large
 .hide-lg-up {
   @include mixins.breakpoint-up(large) {
@@ -137,8 +141,16 @@ p {
   border-width: 2px;
   border-radius: 5px;
 
+  @include mixins.breakpoint-up(large) {
+    font-size: $fz-lg;
+  }
+
   .material-icons {
     margin-right: 1.2rem;
+  }
+
+  &-text {
+    margin-bottom: 0.2rem;
   }
 }
 
@@ -165,6 +177,10 @@ p {
   color: $light-blue;
   font-family: $ubuntu-mono;
   font-weight: bold;
+
+  @include mixins.breakpoint-up(medium) {
+    max-width: none;
+  }
 
   &:hover,
   &:focus {
