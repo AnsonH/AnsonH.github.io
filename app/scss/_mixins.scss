@@ -7,6 +7,12 @@
   }
 }
 
+@mixin breakpoint-up-px($px) {
+  @media (min-width: $px) {
+    @content;
+  }
+}
+
 @mixin breakpoint-down($size) {
   @media (max-width: map-get($map: $breakpoints-down, $key: $size)) {
     @content;

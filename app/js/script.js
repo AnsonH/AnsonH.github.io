@@ -18,14 +18,13 @@ function removeClass(selector, className) {
 
 /** ScrollReveal (https://scrollrevealjs.org) */
 
-// Default options
-ScrollReveal({
+const popUp = {
   delay: 150,
   scale: 0.92,
   viewFactor: 0.2, // Reveal when 20% of elements are within viewport
-});
+};
 
-ScrollReveal().reveal(".about");
+ScrollReveal().reveal(".about", popUp);
 
 /** TypeIt.js (https://typeitjs.com/docs) */
 

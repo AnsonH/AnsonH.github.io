@@ -94,9 +94,9 @@ a {
 a.text-link::after {
   content: "";
   width: 100%;
-  height: 0.2rem;
+  height: 0.1rem;
   position: absolute;
-  bottom: 0;
+  bottom: 0.1rem;
   left: 0;
   right: 0;
   background-color: #53d5e4;
@@ -179,11 +179,18 @@ h2::after {
 p {
   line-height: 1.5;
   margin-top: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 img {
   display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .no-select {
@@ -242,6 +249,11 @@ img {
 /**** Flex ****/
 .flex {
   display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 .flex-jc-c {
   justify-content: center;
@@ -633,13 +645,39 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 @media (min-width: 481px) {
   .about__intro {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 @media (min-width: 1081px) {
   .about__intro {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
+}
+.about__skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 3.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 620px) {
+  .about__skills {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.6rem;
+  }
+}
+.about__skills li {
+  display: flex;
+  align-items: center;
+}
+.about__skills li:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.about__skills img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

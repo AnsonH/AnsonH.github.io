@@ -42,11 +42,40 @@
 
   &__intro {
     @include mixins.breakpoint-up(medium) {
-      font-size: $fz-mmd;
+      font-size: $fz-md;
     }
 
     @include mixins.breakpoint-up(extra-large) {
-      font-size: $fz-lg;
+      font-size: $fz-mmd;
+    }
+  }
+
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 3.5rem;
+    margin-top: 1rem;
+    font-size: $fz-xs;
+
+    @include mixins.breakpoint-up-px(620px) {
+      grid-template-columns: repeat(3, 1fr);
+      font-size: $fz-sm;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 1rem;
     }
   }
 }
