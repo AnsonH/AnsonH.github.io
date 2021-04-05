@@ -103,8 +103,15 @@ a.text-link::after {
   transform: scaleX(0);
   transition: all 150ms ease-in-out;
 }
-a.text-link:hover::after {
+a.text-link:hover::after, a.text-link:focus::after {
   transform: scaleX(1);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1,
@@ -176,6 +183,16 @@ h2::after {
   }
 }
 
+h3 {
+  margin: 0 0 1.2rem;
+  font-size: 1.8rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01rem;
+  color: #ffffff;
+}
+
 p {
   line-height: 1.5;
   margin-top: 0;
@@ -242,8 +259,14 @@ ul {
 }
 
 .pad-y {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media (min-width: 769px) {
+  .pad-y {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
 }
 
 /**** Flex ****/
@@ -323,13 +346,8 @@ ul {
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   font-weight: bold;
 }
-@media (min-width: 481px) {
-  .resume-btn {
-    max-width: none;
-  }
-}
 .resume-btn:hover, .resume-btn:focus {
-  background-color: rgba(83, 213, 228, 0.2);
+  background-color: rgba(83, 213, 228, 0.15);
 }
 
 .header {
@@ -678,6 +696,102 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   width: 2.5rem;
   height: 2.5rem;
   margin-right: 1rem;
+}
+
+.work__container {
+  position: relative;
+  margin-bottom: 8rem;
+}
+.work__tabs {
+  display: flex;
+  position: relative;
+}
+.work__tabs .tab {
+  width: 9rem;
+  padding: 1rem 0;
+  color: #b2b2b2;
+  border-bottom: 0.2rem solid #436069;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+.work__tabs .tab:hover {
+  color: #53d5e4;
+  background-color: rgba(83, 213, 228, 0.15);
+}
+.work__tabs .tab.active {
+  color: #53d5e4;
+}
+.work__tabs .tab.tab-1.active ~ .highlighter {
+  transform: translateX(0rem);
+}
+.work__tabs .tab.tab-2.active ~ .highlighter {
+  transform: translateX(9rem);
+}
+.work__tabs .highlighter {
+  display: block;
+  height: 0.2rem;
+  width: 9rem;
+  position: absolute;
+  left: 0;
+  bottom: 0.05rem;
+  background-color: #53d5e4;
+  transform: translateX(0);
+  transition: all 250ms ease-in-out;
+}
+.work__content {
+  position: relative;
+}
+.work__content_section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.work__content_section.visible {
+  position: relative;
+  padding-top: 3rem;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 250ms ease-in-out;
+}
+.work__company_name {
+  color: #b2b2b2;
+}
+.work__duration {
+  color: #b2b2b2;
+  font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+.work__duration .work__remote {
+  margin-left: 2rem;
+}
+.work__description {
+  font-size: 1.5rem;
+}
+.work__description li {
+  display: flex;
+  line-height: 1.5;
+}
+.work__description li p {
+  margin-bottom: 2rem;
+}
+.work__description li:last-child p {
+  margin-bottom: 0rem;
+}
+.work__description li .material-icons {
+  color: #5fd700;
+  margin: 0.4rem 1.5rem 0 0;
+  font-size: 1.4rem;
+}
+.work__resume p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.work__resume .resume-btn {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -53,11 +53,19 @@ a.text-link {
     transition: $ease-150;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::after {
       transform: scaleX(1);
     }
   }
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1,
@@ -123,6 +131,16 @@ h2 {
       margin-left: 3rem;
     }
   }
+}
+
+h3 {
+  margin: 0 0 1.2rem;
+  font-size: $fz-mmd;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01rem;
+  color: $white;
 }
 
 p {
@@ -192,8 +210,13 @@ ul {
 }
 
 .pad-y {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include mixins.breakpoint-up(large) {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
 }
 
 /**** Flex ****/
@@ -281,10 +304,6 @@ ul {
   color: $light-blue;
   font-family: $ubuntu-mono;
   font-weight: bold;
-
-  @include mixins.breakpoint-up(medium) {
-    max-width: none;
-  }
 
   &:hover,
   &:focus {

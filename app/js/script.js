@@ -21,10 +21,11 @@ function removeClass(selector, className) {
 const popUp = {
   delay: 150,
   scale: 0.92,
-  viewFactor: 0.2, // Reveal when 20% of elements are within viewport
+  viewFactor: 0.3, // Reveal when 30% of elements are within viewport
 };
 
 ScrollReveal().reveal(".about", popUp);
+ScrollReveal().reveal(".work", popUp);
 
 /** TypeIt.js (https://typeitjs.com/docs) */
 
@@ -98,3 +99,26 @@ focusElements.forEach((element) => {
     element.blur();
   });
 });
+
+/** Work Experience tab view */
+
+const tabs = document.querySelectorAll(".work__tabs > .tab");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", (e) => handleTabClick(e));
+});
+
+function handleTabClick(e) {
+  const target = e.target; // Clicked tab button
+  const tabNum = target.dataset.tab; // Returns "data-tab" value
+  if (!tabNum) return;
+
+  const activeTab = document.querySelector(".work__tabs .active");
+  const activeContent = document.querySelector(".work__content .visible");
+  const currentContent = document.querySelector(`.work__content_section[data-tab='${tabNum}']`);
+
+  activeTab.classList.remove("active");
+  target.classList.add("active");
+  activeContent.classList.remove("visible");
+  currentContent.classList.add("visible");
+}
