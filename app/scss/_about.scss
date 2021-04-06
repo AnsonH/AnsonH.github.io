@@ -7,7 +7,6 @@
 
     @include mixins.breakpoint-up(large) {
       flex-direction: row;
-      padding: 0 4rem;
     }
   }
 

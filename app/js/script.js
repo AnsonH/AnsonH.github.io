@@ -21,7 +21,7 @@ function removeClass(selector, className) {
 const popUp = {
   delay: 150,
   scale: 0.92,
-  viewFactor: 0.3, // Reveal when 30% of elements are within viewport
+  viewFactor: 0.2, // Reveal when 20% of elements are within viewport
 };
 
 ScrollReveal().reveal(".about", popUp);
@@ -59,6 +59,7 @@ new TypeIt("#hero__title1", {
 const header = document.querySelector(".header");
 const headerOverlay = document.querySelector(".header__overlay");
 const hamburger = document.querySelector("#hamburger");
+const navLogo = document.querySelector(".nav__logo");
 const navLinks = document.querySelectorAll(".nav__links > li > a");
 const navLinksMobile = document.querySelectorAll(".nav__mobile_links > li > a");
 const fadeElements = document.querySelectorAll(".has-fade");
@@ -93,7 +94,7 @@ closeMenuElements.forEach((element) => {
 });
 
 // Remove focus after clicking for buttons & anchor links
-const focusElements = [...navLinks, hamburger];
+const focusElements = [...navLinks, hamburger, navLogo];
 focusElements.forEach((element) => {
   element.addEventListener("click", function () {
     element.blur();

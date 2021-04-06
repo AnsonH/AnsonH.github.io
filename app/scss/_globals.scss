@@ -65,6 +65,7 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  outline: none;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -134,13 +135,17 @@ h2 {
 }
 
 h3 {
-  margin: 0 0 1.2rem;
-  font-size: $fz-mmd;
+  margin: 0 0 1rem;
+  font-size: $fz-lg;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.01rem;
   color: $white;
+
+  @include mixins.breakpoint-up(large) {
+    font-size: $fz-xl;
+  }
 }
 
 p {
@@ -206,6 +211,13 @@ ul {
   @include mixins.breakpoint-up(large) {
     max-width: 114rem;
     margin: 0 auto;
+  }
+}
+
+.pad-x-lg {
+  @include mixins.breakpoint-up(large) {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 

@@ -111,6 +111,7 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  outline: none;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -184,13 +185,18 @@ h2::after {
 }
 
 h3 {
-  margin: 0 0 1.2rem;
-  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.01rem;
   color: #ffffff;
+}
+@media (min-width: 769px) {
+  h3 {
+    font-size: 2.2rem;
+  }
 }
 
 p {
@@ -255,6 +261,13 @@ ul {
   .container {
     max-width: 114rem;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .pad-x-lg {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -382,12 +395,6 @@ ul {
 nav {
   height: 5rem;
   width: 100%;
-}
-@media (min-width: 769px) {
-  nav {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
 }
 nav .nav__logo {
   display: inline-block;
@@ -629,7 +636,6 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 @media (min-width: 769px) {
   .about__content {
     flex-direction: row;
-    padding: 0 4rem;
   }
 }
 .about__photo {
@@ -702,21 +708,44 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   position: relative;
   margin-bottom: 8rem;
 }
+@media (min-width: 769px) {
+  .work__container {
+    display: flex;
+    margin: 0 auto 9rem;
+    max-width: 90rem;
+  }
+}
 .work__tabs {
   display: flex;
+  flex-direction: row;
   position: relative;
 }
+@media (min-width: 769px) {
+  .work__tabs {
+    display: block;
+    width: 10rem;
+    height: max-content;
+  }
+}
 .work__tabs .tab {
-  width: 9rem;
-  padding: 1rem 0;
-  color: #b2b2b2;
+  width: 10rem;
+  height: 4rem;
+  padding: 0.5rem;
+  border-right: none;
   border-bottom: 0.2rem solid #436069;
+  color: #b2b2b2;
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   transition: all 250ms ease-in-out;
 }
-.work__tabs .tab:hover {
+@media (min-width: 769px) {
+  .work__tabs .tab {
+    border-right: 0.2rem solid #436069;
+    border-bottom: none;
+  }
+}
+.work__tabs .tab:hover, .work__tabs .tab:focus {
   color: #53d5e4;
   background-color: rgba(83, 213, 228, 0.15);
 }
@@ -726,22 +755,48 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 .work__tabs .tab.tab-1.active ~ .highlighter {
   transform: translateX(0rem);
 }
+@media (min-width: 769px) {
+  .work__tabs .tab.tab-1.active ~ .highlighter {
+    transform: translateY(0rem);
+  }
+}
 .work__tabs .tab.tab-2.active ~ .highlighter {
-  transform: translateX(9rem);
+  transform: translateX(10rem);
+}
+@media (min-width: 769px) {
+  .work__tabs .tab.tab-2.active ~ .highlighter {
+    transform: translateY(4rem);
+  }
 }
 .work__tabs .highlighter {
   display: block;
   height: 0.2rem;
-  width: 9rem;
+  width: 10rem;
   position: absolute;
   left: 0;
-  bottom: 0.05rem;
+  bottom: 0;
   background-color: #53d5e4;
   transform: translateX(0);
-  transition: all 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+}
+@media (min-width: 769px) {
+  .work__tabs .highlighter {
+    height: 4rem;
+    width: 0.2rem;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    right: 0;
+    transform: translateY(0);
+  }
 }
 .work__content {
   position: relative;
+}
+@media (min-width: 769px) {
+  .work__content {
+    margin-left: 4rem;
+  }
 }
 .work__content_section {
   position: absolute;
@@ -756,6 +811,11 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   z-index: 1;
   transition: opacity 250ms ease-in-out;
 }
+@media (min-width: 769px) {
+  .work__content_section.visible {
+    padding-top: 0;
+  }
+}
 .work__company_name {
   color: #b2b2b2;
 }
@@ -768,8 +828,18 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 .work__duration .work__remote {
   margin-left: 2rem;
 }
+@media (min-width: 769px) {
+  .work__duration {
+    font-size: 1.5rem;
+  }
+}
 .work__description {
   font-size: 1.5rem;
+}
+@media (min-width: 769px) {
+  .work__description {
+    font-size: 1.6rem;
+  }
 }
 .work__description li {
   display: flex;
@@ -783,8 +853,15 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 .work__description li .material-icons {
   color: #5fd700;
-  margin: 0.4rem 1.5rem 0 0;
+  margin-top: 0.4rem;
+  margin-right: 1.5rem;
   font-size: 1.4rem;
+}
+@media (min-width: 769px) {
+  .work__description li .material-icons {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
 .work__resume p {
   margin-bottom: 2rem;
