@@ -26,6 +26,8 @@ const popUp = {
 
 ScrollReveal().reveal(".about", popUp);
 ScrollReveal().reveal(".work", popUp);
+ScrollReveal().reveal(".project__header", popUp);
+ScrollReveal().reveal(".project__item", popUp);
 
 /** TypeIt.js (https://typeitjs.com/docs) */
 

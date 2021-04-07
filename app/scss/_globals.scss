@@ -272,13 +272,19 @@ ul {
 
 /**** Buttons ****/
 .outline-btn {
+  width: max-content; // Prevent button taking 100% width due to flex
   display: flex;
   align-items: center;
   padding: 1.2rem 1.5rem;
   margin: 1rem 0;
-  border-style: solid;
-  border-width: 2px;
+  border: 2px solid $light-gray;
   border-radius: 5px;
+  color: $light-gray;
+
+  &:hover,
+  &:focus {
+    background-color: $light-gray-hover;
+  }
 
   @include mixins.breakpoint-up(large) {
     font-size: $fz-lg;
@@ -294,15 +300,10 @@ ul {
 }
 
 .email-btn {
-  max-width: 18rem;
   border-color: $orange;
   color: $orange;
   font-family: $ubuntu-mono;
   font-weight: bold;
-
-  @include mixins.breakpoint-up(medium) {
-    max-width: none;
-  }
 
   &:hover,
   &:focus {
@@ -311,7 +312,6 @@ ul {
 }
 
 .resume-btn {
-  max-width: 13rem;
   border-color: $light-blue;
   color: $light-blue;
   font-family: $ubuntu-mono;

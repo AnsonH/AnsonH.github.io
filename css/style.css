@@ -316,13 +316,17 @@ ul {
 
 /**** Buttons ****/
 .outline-btn {
+  width: max-content;
   display: flex;
   align-items: center;
   padding: 1.2rem 1.5rem;
   margin: 1rem 0;
-  border-style: solid;
-  border-width: 2px;
+  border: 2px solid #b2b2b2;
   border-radius: 5px;
+  color: #b2b2b2;
+}
+.outline-btn:hover, .outline-btn:focus {
+  background-color: rgba(178, 178, 178, 0.15);
 }
 @media (min-width: 769px) {
   .outline-btn {
@@ -337,23 +341,16 @@ ul {
 }
 
 .email-btn {
-  max-width: 18rem;
   border-color: #ff9900;
   color: #ff9900;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   font-weight: bold;
-}
-@media (min-width: 481px) {
-  .email-btn {
-    max-width: none;
-  }
 }
 .email-btn:hover, .email-btn:focus {
   background-color: rgba(255, 153, 0, 0.2);
 }
 
 .resume-btn {
-  max-width: 13rem;
   border-color: #53d5e4;
   color: #53d5e4;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
@@ -869,6 +866,96 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 .work__resume .resume-btn {
   margin: 0 auto;
+}
+
+.project h2 {
+  margin-bottom: 1.5rem;
+}
+.project__subtitle {
+  margin-bottom: 4.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .project__subtitle {
+    margin-bottom: 6rem;
+  }
+}
+.project__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .project__item {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5rem;
+  }
+}
+@media (min-width: 769px) {
+  .project__image_left_lg .project__image {
+    grid-column: 1/7;
+  }
+  .project__image_left_lg .project__info {
+    grid-column: 7/-1;
+  }
+}
+.project__image {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 481px) {
+  .project__image {
+    max-width: 50rem;
+  }
+}
+@media (min-width: 769px) {
+  .project__image {
+    max-width: none;
+    margin-bottom: 0;
+  }
+}
+.project__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 769px) {
+  .project__title {
+    text-align: left;
+  }
+}
+.project__description {
+  font-size: 1.5rem;
+}
+.project__description p {
+  margin-bottom: 2rem;
+}
+.project__description p:last-child {
+  margin-bottom: 0;
+}
+.project__button_group {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 769px) {
+  .project__button_group {
+    justify-content: flex-start;
+  }
+}
+.project__button_group .outline-btn {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.project__button_group .outline-btn .github-icon {
+  margin-right: 1.2rem;
+}
+.project__button_group .github-btn {
+  margin-right: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
