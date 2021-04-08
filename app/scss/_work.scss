@@ -150,6 +150,20 @@
       display: flex;
       line-height: 1.5;
 
+      // Green chevron as the bullet points
+      &::before {
+        content: "arrow_forward_ios";
+        margin-top: 0.1rem;
+        margin-right: 1.5rem;
+        color: $lime;
+        font-family: "Material Icons";
+        font-size: $fz-xxs;
+
+        @include mixins.breakpoint-up(large) {
+          font-size: $fz-xs;
+        }
+      }
+
       p {
         margin-bottom: 2rem;
       }
@@ -157,18 +171,6 @@
       &:last-child {
         p {
           margin-bottom: 0rem;
-        }
-      }
-
-      .material-icons {
-        color: $lime;
-        margin-top: 0.4rem;
-        margin-right: 1.5rem;
-        font-size: $fz-xxs;
-
-        @include mixins.breakpoint-up(large) {
-          margin-top: 0.5rem;
-          font-size: $fz-xs;
         }
       }
     }

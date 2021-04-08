@@ -326,7 +326,7 @@ ul {
   color: #b2b2b2;
 }
 .outline-btn:hover, .outline-btn:focus {
-  background-color: rgba(178, 178, 178, 0.15);
+  background-color: rgba(178, 178, 178, 0.17);
 }
 @media (min-width: 769px) {
   .outline-btn {
@@ -357,7 +357,7 @@ ul {
   font-weight: bold;
 }
 .resume-btn:hover, .resume-btn:focus {
-  background-color: rgba(83, 213, 228, 0.15);
+  background-color: rgba(83, 213, 228, 0.2);
 }
 
 .header {
@@ -744,7 +744,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 .work__tabs .tab:hover, .work__tabs .tab:focus {
   color: #53d5e4;
-  background-color: rgba(83, 213, 228, 0.15);
+  background-color: rgba(83, 213, 228, 0.2);
 }
 .work__tabs .tab.active {
   color: #53d5e4;
@@ -842,23 +842,24 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   display: flex;
   line-height: 1.5;
 }
+.work__description li::before {
+  content: "arrow_forward_ios";
+  margin-top: 0.1rem;
+  margin-right: 1.5rem;
+  color: #5fd700;
+  font-family: "Material Icons";
+  font-size: 1.4rem;
+}
+@media (min-width: 769px) {
+  .work__description li::before {
+    font-size: 1.5rem;
+  }
+}
 .work__description li p {
   margin-bottom: 2rem;
 }
 .work__description li:last-child p {
   margin-bottom: 0rem;
-}
-.work__description li .material-icons {
-  color: #5fd700;
-  margin-top: 0.4rem;
-  margin-right: 1.5rem;
-  font-size: 1.4rem;
-}
-@media (min-width: 769px) {
-  .work__description li .material-icons {
-    margin-top: 0.5rem;
-    font-size: 1.5rem;
-  }
 }
 .work__resume p {
   margin-bottom: 2rem;
