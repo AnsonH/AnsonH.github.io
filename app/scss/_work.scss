@@ -104,11 +104,13 @@
       position: absolute; // Take the section content out of flow
       top: 0;
       left: 0;
+      visibility: hidden;
       opacity: 0; // Make them invisible initially
 
       &.visible {
         position: relative; // IMPORTANT!
         padding-top: 3rem;
+        visibility: visible;
         opacity: 1;
         z-index: 1; // Visible content stacks on top
         transition: opacity 250ms ease-in-out;

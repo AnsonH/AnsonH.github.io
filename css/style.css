@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/***** General *****/
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -60,7 +59,6 @@
     transform: scale(0.6);
   }
 }
-/***** Hero *****/
 @keyframes hero-hand-wave {
   0% {
     transform: rotate(0deg);
@@ -833,11 +831,13 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden;
   opacity: 0;
 }
 .work__content_section.visible {
   position: relative;
   padding-top: 3rem;
+  visibility: visible;
   opacity: 1;
   z-index: 1;
   transition: opacity 250ms ease-in-out;
@@ -1027,7 +1027,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   transition: all 150ms ease-in-out;
 }
 .contact__info_box {
-  width: max-content;
+  width: 16rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -1043,6 +1043,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   background-color: #265600;
 }
 .contact__info_box.copy-fail {
+  width: 17.5rem;
   background-color: #de3d31;
 }
 
