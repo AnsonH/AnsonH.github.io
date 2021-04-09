@@ -270,6 +270,10 @@ ul {
   animation: fade-out 250ms ease-in-out forwards;
 }
 
+.fade-in-out {
+  animation: fade-in-out 2s ease forwards;
+}
+
 /**** Buttons ****/
 .outline-btn {
   width: max-content; // Prevent button taking 100% width due to flex

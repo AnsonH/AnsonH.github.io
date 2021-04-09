@@ -111,7 +111,7 @@
       <div class="container pad-y">
         <h2 id="about" class="flex flex-jc-c">About Me</h2>
         <div class="about__content flex flex-ai-c pad-x-lg">
-          <img src="./images/me.png" class="about__photo" alt="Photo of me" />
+          <img class="about__photo" src="./images/me.png" alt="Photo of me" />
           <div class="about__intro_container flex-column">
             <div class="about__intro">
               <p>
@@ -130,18 +130,18 @@
             </div>
             <div class="about__skills">
               <ul>
-                <li><img src="./images/skills/html.svg" alt="HTML" /> HTML & CSS</li>
-                <li><img src="./images/skills/sass.svg" alt="Sass" /> Sass</li>
-                <li><img src="./images/skills/javascript.svg" alt="Javascript" /> Javascript (ES6+)</li>
+                <li><img src="./images/skills/html.svg" loading="lazy" alt="HTML" /> HTML & CSS</li>
+                <li><img src="./images/skills/sass.svg" loading="lazy" alt="Sass" /> Sass</li>
+                <li><img src="./images/skills/javascript.svg" loading="lazy" alt="Javascript" /> Javascript (ES6+)</li>
               </ul>
               <ul>
-                <li><img src="./images/skills/react.svg" alt="React" /> React</li>
-                <li><img src="./images/skills/php.svg" alt="PHP" /> PHP</li>
-                <li><img src="./images/skills/laravel.svg" alt="Laravel" /> Laravel</li>
+                <li><img src="./images/skills/react.svg" loading="lazy" alt="React" /> React</li>
+                <li><img src="./images/skills/php.svg" loading="lazy" alt="PHP" /> PHP</li>
+                <li><img src="./images/skills/laravel.svg" loading="lazy" alt="Laravel" /> Laravel</li>
               </ul>
               <ul>
-                <li><img src="./images/skills/python.svg" alt="Python" /> Python</li>
-                <li><img src="./images/skills/git.svg" alt="Git" /> Git & GitHub</li>
+                <li><img src="./images/skills/python.svg" loading="lazy" alt="Python" /> Python</li>
+                <li><img src="./images/skills/git.svg" loading="lazy" alt="Git" /> Git & GitHub</li>
               </ul>
             </div>
           </div>
@@ -250,7 +250,12 @@
         </div>
         <ul class="project__list pad-x-lg">
           <li class="project__item project__image_left_lg">
-            <img class="project__image" src="./images/projects/easybank.png" alt="Easybank Landing Page" />
+            <img
+              class="project__image"
+              src="./images/projects/easybank.png"
+              loading="lazy"
+              alt="Easybank Landing Page"
+            />
             <div class="project__info">
               <h3 class="project__title">Easybank Landing Page</h3>
               <div class="project__description">
@@ -261,7 +266,10 @@
                 </p>
                 <p>
                   Credits to
-                  <a class="text-link" href="https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN"
+                  <a
+                    class="text-link"
+                    href="https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN"
+                    target="_blank"
                     >Frontend Mentor</a
                   >
                   for the website design.
@@ -290,6 +298,29 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Get in Touch -->
+    <section class="contact">
+      <div class="container pad-y">
+        <h2 id="contact" class="flex flex-jc-c">Contact Me</h2>
+        <div class="contact__container pad-x-lg">
+          <p class="contact__message">
+            Thank you for visiting my site! If you’re looking for a front-end developer, have a question or want to say
+            hi, feel free to shoot me an email!
+          </p>
+          <a class="contact__email outline-btn email-btn" href="mailto:ansonheung2000@gmail.com">
+            <span class="material-icons no-select">mail_outline</span>
+            <span class="outline-btn-text">Get in Touch</span></a
+          >
+          <button class="contact__copy_email flex flex-ai-c">
+            <span class="material-icons no-select">content_copy</span>
+            <span class="copy-btn-text">Copy Email Address</span>
+          </button>
+          <p class="contact__info_box copy-success has-fade">Copied to clipboard</p>
+          <p class="contact__info_box copy-fail has-fade">Copy failed. Try again!</p>
+        </div>
       </div>
     </section>
 

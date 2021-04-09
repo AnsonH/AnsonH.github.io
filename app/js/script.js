@@ -24,10 +24,10 @@ const popUp = {
   viewFactor: 0.2, // Reveal when 20% of elements are within viewport
 };
 
-ScrollReveal().reveal(".about", popUp);
-ScrollReveal().reveal(".work", popUp);
-ScrollReveal().reveal(".project__header", popUp);
-ScrollReveal().reveal(".project__item", popUp);
+const popUpItems = [".about", ".work", ".project__header", ".project__item", ".contact"];
+popUpItems.forEach((item) => {
+  ScrollReveal().reveal(item, popUp);
+});
 
 /** TypeIt.js (https://typeitjs.com/docs) */
 
@@ -125,3 +125,27 @@ function handleTabClick(e) {
   activeContent.classList.remove("visible");
   currentContent.classList.add("visible");
 }
+
+/** Get in Touch - Copy email to clipboard */
+
+const copyEmailBtn = document.querySelector(".contact__copy_email");
+const successInfoBox = document.querySelector(".contact__info_box.copy-success");
+const failInfoBox = document.querySelector(".contact__info_box.copy-fail");
+
+// Callback function after the popup box has finished animating
+const animEndCallback = (e) => {
+  e.target.classList.remove("fade-in-out");
+};
+
+copyEmailBtn.addEventListener("click", (e) => {
+  navigator.clipboard.writeText("ansonheung2000@gmail.com").then(
+    () => {
+      successInfoBox.classList.add("fade-in-out");
+      successInfoBox.addEventListener("animationend", animEndCallback);
+    },
+    (err) => {
+      failInfoBox.classList.add("fade-in-out");
+      failInfoBox.addEventListener("animationend", animEndCallback);
+    }
+  );
+});
