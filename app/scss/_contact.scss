@@ -2,10 +2,6 @@
 @use "mixins";
 
 .contact {
-  &__container {
-    display: relative; // Since info box has absolute position
-  }
-
   &__message {
     margin: 0 auto 5rem;
     text-align: center;
@@ -24,22 +20,17 @@
     margin: 0 auto;
     padding: 0.5rem 0.8rem;
     color: $light-gray;
-    transition: $ease-150;
+    transition: $ease-250;
 
     &:hover,
     &:focus {
       color: $orange;
-
-      .copy-btn-text {
-        border-bottom: 1px solid $orange;
-      }
     }
 
     .copy-btn-text {
       margin-left: 1.2rem;
       font-size: $fz-xs;
-      border-bottom: 1px solid $light-gray;
-      transition: $ease-150;
+      text-decoration: underline;
     }
   }
 

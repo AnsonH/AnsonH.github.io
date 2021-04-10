@@ -993,9 +993,6 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   margin-right: 2.5rem;
 }
 
-.contact__container {
-  display: relative;
-}
 .contact__message {
   margin: 0 auto 5rem;
   text-align: center;
@@ -1012,19 +1009,15 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   margin: 0 auto;
   padding: 0.5rem 0.8rem;
   color: #b2b2b2;
-  transition: all 150ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 .contact__copy_email:hover, .contact__copy_email:focus {
   color: #ff9900;
 }
-.contact__copy_email:hover .copy-btn-text, .contact__copy_email:focus .copy-btn-text {
-  border-bottom: 1px solid #ff9900;
-}
 .contact__copy_email .copy-btn-text {
   margin-left: 1.2rem;
   font-size: 1.5rem;
-  border-bottom: 1px solid #b2b2b2;
-  transition: all 150ms ease-in-out;
+  text-decoration: underline;
 }
 .contact__info_box {
   width: 16rem;
