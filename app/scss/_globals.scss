@@ -233,6 +233,7 @@ ul {
 }
 
 /**** Flex ****/
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -256,6 +257,7 @@ ul {
 }
 
 /**** Animations ****/
+
 // All animation keyframes are defined in "_keyframes.scss"
 
 // Initially set visibility to hidden for elements that has fade effect
@@ -276,6 +278,7 @@ ul {
 }
 
 /**** Buttons ****/
+
 .outline-btn {
   width: max-content; // Prevent button taking 100% width due to flex
   display: flex;
@@ -304,26 +307,22 @@ ul {
   }
 }
 
-.email-btn {
-  border-color: $orange;
-  color: $orange;
+@mixin cta-outline-btn($color, $hoverColor) {
+  border-color: $color;
+  color: $color;
   font-family: $ubuntu-mono;
   font-weight: bold;
 
   &:hover,
   &:focus {
-    background-color: $orange-hover;
+    background-color: $hoverColor;
   }
 }
 
-.resume-btn {
-  border-color: $light-blue;
-  color: $light-blue;
-  font-family: $ubuntu-mono;
-  font-weight: bold;
+.email-btn {
+  @include cta-outline-btn($orange, $orange-hover);
+}
 
-  &:hover,
-  &:focus {
-    background-color: $light-blue-hover;
-  }
+.resume-btn {
+  @include cta-outline-btn($light-blue, $light-blue-hover);
 }

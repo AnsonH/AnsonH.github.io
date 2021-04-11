@@ -1,4 +1,4 @@
-# Anson Heung - Personal Site :sparkles:
+# Anson Heung - Personal Site
 
 My personal site hosted with GitHub Pages and built with HTML, Sass and Javascript.
 
