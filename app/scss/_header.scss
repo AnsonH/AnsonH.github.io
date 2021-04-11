@@ -50,9 +50,12 @@ nav {
     display: inline-block;
     transition: $ease-150;
 
-    &:hover,
-    &:focus {
+    &:hover {
       opacity: 0.7;
+    }
+
+    &:focus {
+      border: 0.1rem dashed $white;
     }
 
     > img {
