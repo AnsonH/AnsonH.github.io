@@ -24,5 +24,5 @@ To start the development server using VS Code's [Live Server](https://marketplac
 5. In VS Code, open a new integrated Terminal window
 6. Run the following command and leave it running in background
    ```
-   sass app/scss:css
+   sass app/scss:css --watch
    ```

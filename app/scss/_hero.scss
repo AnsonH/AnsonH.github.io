@@ -54,10 +54,13 @@
     margin-bottom: 2rem;
 
     .green-chevron {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-top: 0.5rem;
+
       @include mixins.breakpoint-up(medium) {
         width: 2.9rem;
         height: 2.9rem;
-        margin-top: 0.5rem;
       }
 
       @include mixins.breakpoint-up(large) {

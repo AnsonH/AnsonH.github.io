@@ -566,11 +566,15 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 .hero__title {
   margin-bottom: 2rem;
 }
+.hero__title .green-chevron {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0.5rem;
+}
 @media (min-width: 481px) {
   .hero__title .green-chevron {
     width: 2.9rem;
     height: 2.9rem;
-    margin-top: 0.5rem;
   }
 }
 @media (min-width: 769px) {
