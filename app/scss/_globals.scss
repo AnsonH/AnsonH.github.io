@@ -6,6 +6,7 @@ html {
   font-size: 62.5%; // Default font size = 16px, --> 10px = 1rem
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem; // Prevent fixed header overlaps with page anchors
 }
 
 // Disable smooth scrolling if user prefers reduced motion

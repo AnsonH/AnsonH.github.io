@@ -89,6 +89,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
