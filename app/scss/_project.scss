@@ -21,6 +21,10 @@
     flex-direction: column;
     align-items: center;
 
+    &:not(:last-child) {
+      margin-bottom: 9rem;
+    }
+
     @include mixins.breakpoint-up(large) {
       display: grid;
       grid-template-columns: repeat(10, 1fr);
