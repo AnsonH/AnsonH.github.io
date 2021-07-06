@@ -21,7 +21,7 @@ function removeClass(selector, className) {
 const popUp = {
   delay: 150,
   scale: 0.92,
-  viewFactor: 0.2, // Reveal when 20% of elements are within viewport
+  viewFactor: 0.25, // Reveal when 25% of elements are within viewport
 };
 
 const popUpItems = [".about", ".work", ".project__header", ".project__item", ".contact"];
@@ -38,7 +38,7 @@ const heroTitle2 = new TypeIt("#hero__title2", {
   afterComplete: async (step, instance) => {
     await sleep(150);
     instance.destroy();
-    ScrollReveal().reveal(".hero__content", { delay: 100, distance: "10px" });
+    ScrollReveal().reveal(".hero__content", { delay: 100, distance: "10px", origin: "left" });
   },
 });
 

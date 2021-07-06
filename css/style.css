@@ -85,6 +85,17 @@
     transform: rotate(0deg);
   }
 }
+@keyframes bounce-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -908,7 +919,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 }
 
 .project h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .project__subtitle {
   margin-bottom: 4.5rem;
@@ -1112,6 +1123,11 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 .footer__scroll_top:hover ~ .footer__scroll_top_text, .footer__scroll_top:focus ~ .footer__scroll_top_text {
   visibility: visible;
   opacity: 1;
+}
+.footer__scroll_top:hover .material-icons, .footer__scroll_top:focus .material-icons {
+  animation-name: bounce-up;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 }
 .footer__scroll_top .material-icons {
   font-size: 3rem;

@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins";
+@use "keyframes";
 
 .footer {
   .container {
@@ -80,6 +81,12 @@
       & ~ .footer__scroll_top_text {
         visibility: visible;
         opacity: 1;
+      }
+
+      & .material-icons {
+        animation-name: bounce-up;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
       }
     }
 

@@ -90,3 +90,16 @@
     transform: rotate(0deg);
   }
 }
+
+// Chevron animation in Scroll To Top button at the footer
+@keyframes bounce-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
