@@ -36,7 +36,6 @@ a {
   position: relative;
   text-decoration: none;
   color: $light-blue;
-  transition: $ease-150;
 }
 
 a.text-link {
@@ -289,6 +288,7 @@ ul {
   border: 2px solid $light-gray;
   border-radius: 5px;
   color: $light-gray;
+  transition: $ease-150;
 
   &:hover,
   &:focus {

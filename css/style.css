@@ -128,7 +128,6 @@ a {
   position: relative;
   text-decoration: none;
   color: #53d5e4;
-  transition: all 150ms ease-in-out;
 }
 
 a.text-link::after {
@@ -368,6 +367,7 @@ ul {
   border: 2px solid #b2b2b2;
   border-radius: 5px;
   color: #b2b2b2;
+  transition: all 150ms ease-in-out;
 }
 .outline-btn:hover, .outline-btn:focus {
   background-color: rgba(178, 178, 178, 0.17);
