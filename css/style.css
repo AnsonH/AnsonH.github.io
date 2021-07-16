@@ -120,7 +120,7 @@ body {
   font-size: 1.7rem;
   font-family: "Ubuntu", sans-serif;
   background-color: #1f2122;
-  color: #b2b2b2;
+  color: #c1c1c1;
 }
 
 a {
@@ -364,9 +364,9 @@ ul {
   align-items: center;
   padding: 1.2rem 1.5rem;
   margin: 1rem 0;
-  border: 2px solid #b2b2b2;
+  border: 2px solid #c1c1c1;
   border-radius: 5px;
-  color: #b2b2b2;
+  color: #c1c1c1;
   transition: all 150ms ease-in-out;
 }
 .outline-btn:hover, .outline-btn:focus {
@@ -777,7 +777,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   padding: 0.5rem;
   border-right: none;
   border-bottom: 0.2rem solid #436069;
-  color: #b2b2b2;
+  color: #c1c1c1;
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
@@ -863,10 +863,10 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
   }
 }
 .work__company_name {
-  color: #b2b2b2;
+  color: #c1c1c1;
 }
 .work__duration {
-  color: #b2b2b2;
+  color: #c1c1c1;
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace;
   font-weight: 300;
   font-size: 1.4rem;
@@ -1034,7 +1034,7 @@ nav .nav__mobile_links a:hover, nav .nav__mobile_links a:focus {
 .contact__copy_email {
   margin: 0 auto;
   padding: 0.5rem 0.8rem;
-  color: #b2b2b2;
+  color: #c1c1c1;
   transition: all 250ms ease-in-out;
 }
 .contact__copy_email:hover, .contact__copy_email:focus {
