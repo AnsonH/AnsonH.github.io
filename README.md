@@ -2,7 +2,7 @@
 
 My personal site hosted with GitHub Pages and built with HTML, Sass and Javascript.
 
-[![Front page](./images/front_page.png)](https://ansonheung.me/)
+[![Front page](./images/front_page.png)](https://ansonh.github.io/)
 
 ## :hammer_and_wrench: Development
 
