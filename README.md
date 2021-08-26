@@ -1,4 +1,12 @@
-# Anson Heung - Personal Site
+# Anson Heung - Personal Site v1
+
+## :warning: Outdated Version!
+
+You are viewing an outdated version of my personal website.
+
+Check out my new website here: https://www.ansonheung.me/ ([GitHub Link](https://github.com/AnsonH/personal-site-v2))
+
+<hr>
 
 My personal site hosted with GitHub Pages and built with HTML, Sass and Javascript.
 
